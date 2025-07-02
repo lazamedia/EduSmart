@@ -2,32 +2,42 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>EduSmart</title>
 
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Alpine.js (opsional, kalau navbar.html punya interaksi) -->
   <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+  <!-- Font Awesome -->
   <link  rel="stylesheet"
          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
          referrerpolicy="no-referrer" />
 
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
   <link rel="stylesheet" href="assets/css/style.css" />
+
 </head>
 <body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
 
-  <!-- navbar akan disuntik di sini -->
-  <div id="navbar" class="fixed top-0 left-0 right-0 z-50"></div>
+  <!-- Loader (disembunyikan dengan class hidden) -->
+  <div id="loader"
+       class="fixed inset-0 flex items-center justify-center bg-white mt-12 z-10 hidden">
+    <div class="animate-spin rounded-full h-12 w-12 border-t-4 border-green-500 border-opacity-75"></div>
+  </div>
 
-  <!-- konten halaman -->
-  <main id="app" class="pt-24 px-4 lg:px-10 pb-16"></main>
+  <!-- Navbar akan di‑inject di sini -->
+  <header id="navbar"></header>
 
-  <script src="/router.js"></script>
-  <script>
-    document.addEventListener('alpine:init', () => {
-      Alpine.data('router', router);
-    });
-    // inisialisasi router global tanpa harus pakai x-data di HTML
-    router().init();
-  </script>
+  <!-- Area konten -->
+  <main id="app" class="pt-24 pb-16 px-4 lg:px-10 min-h-[calc(100vh-96px)]"></main>
+
+  <!-- Router SPA -->
+  <script src="router.js" defer></script>
+  
 </body>
 </html>
