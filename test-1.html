@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tim Pengembang EduSmart - Inovasi Pendidikan Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-green': '#10B981',
+                        'secondary-green': '#059669',
+                        'light-green': '#D1FAE5',
+                        'primary-yellow': '#F59E0B',
+                        'light-yellow': '#FEF3C7',
+                        'dark-green': '#047857'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="w-10 h-10 bg-primary-green rounded-lg flex items-center justify-center">
+                            <i class="fas fa-graduation-cap text-white text-xl"></i>
+                        </div>
+                        <span class="ml-3 text-2xl font-bold text-gray-800">EduSmart</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#visi-misi" class="text-gray-700 hover:text-primary-green transition duration-300">Visi & Misi</a>
+                    <a href="#tim" class="text-gray-700 hover:text-primary-green transition duration-300">Tim Kami</a>
+                    <a href="#kontak" class="text-gray-700 hover:text-primary-green transition duration-300">Kontak</a>
+                    <button class="bg-primary-green text-white px-6 py-2 rounded-lg hover:bg-secondary-green transition duration-300">
+                        Kembali ke Beranda
+                    </button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#visi-misi" class="block px-3 py-2 text-gray-700 hover:text-primary-green">Visi & Misi</a>
+                <a href="#tim" class="block px-3 py-2 text-gray-700 hover:text-primary-green">Tim Kami</a>
+                <a href="#kontak" class="block px-3 py-2 text-gray-700 hover:text-primary-green">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-16 bg-gradient-to-br from-primary-green via-secondary-green to-dark-green text-white min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div data-aos="zoom-in" class="mb-8">
+                    <div class="w-32 h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
+                        <i class="fas fa-users text-6xl text-white"></i>
+                    </div>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight" data-aos="fade-up">
+                    Tim <span class="text-primary-yellow">Pengembang</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Mahasiswa Teknologi Pendidikan yang berdedikasi menciptakan revolusi pembelajaran digital melalui EduSmart
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
+                    <button class="bg-primary-yellow text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-400 transition duration-300 flex items-center justify-center">
+                        <i class="fas fa-rocket mr-2"></i>
+                        Kenali Tim Kami
+                    </button>
+                    <button class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary-green transition duration-300">
+                        Lihat Proyek Kami
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute top-20 left-10 w-20 h-20 bg-white bg-opacity-10 rounded-full animate-bounce" style="animation-delay: 0s;"></div>
+        <div class="absolute top-40 right-16 w-12 h-12 bg-primary-yellow bg-opacity-30 rounded-full animate-bounce" style="animation-delay: 1s;"></div>
+        <div class="absolute bottom-32 left-20 w-16 h-16 bg-white bg-opacity-10 rounded-full animate-bounce" style="animation-delay: 2s;"></div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section id="visi-misi" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Mengapa EduSmart?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Lahir dari keprihatinan kami terhadap tantangan pendidikan di era digital dan keinginan untuk menciptakan solusi inovatif
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div data-aos="fade-right">
+                    <div class="bg-gradient-to-br from-light-green to-white rounded-3xl p-8 shadow-lg">
+                        <div class="w-16 h-16 bg-primary-green rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-lightbulb text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Latar Belakang</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Pendidikan di era digital memerlukan pendekatan yang inovatif untuk menarik perhatian siswa. 
+                            Banyak siswa mengalami kesulitan dalam memahami materi pembelajaran yang disampaikan secara 
+                            manual atau konvensional. Melihat tantangan ini, kami termotivasi untuk mengembangkan solusi 
+                            yang dapat menjembatani kesenjangan antara metode pembelajaran tradisional dengan kebutuhan 
+                            generasi digital.
+                        </p>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <div class="bg-gradient-to-br from-light-yellow to-white rounded-3xl p-8 shadow-lg">
+                        <div class="w-16 h-16 bg-primary-yellow rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-target text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Tujuan Kami</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            EduSmart dirancang untuk mengatasi masalah pembelajaran konvensional dengan menyediakan materi 
+                            pembelajaran yang interaktif dan menarik. Kami percaya bahwa dengan pendekatan yang tepat, 
+                            setiap siswa dapat belajar dengan cara yang lebih menyenangkan dan efektif, sehingga dapat 
+                            meningkatkan pemahaman dan motivasi belajar mereka.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistics -->
+            <div class="grid md:grid-cols-4 gap-8" data-aos="fade-up">
+                <div class="text-center p-6 bg-gradient-to-br from-primary-green to-secondary-green rounded-2xl text-white">
+                    <div class="text-3xl font-bold mb-2">3</div>
+                    <div class="text-sm opacity-90">Anggota Tim</div>
+                </div>
+                <div class="text-center p-6 bg-gradient-to-br from-primary-yellow to-yellow-500 rounded-2xl text-white">
+                    <div class="text-3xl font-bold mb-2">1</div>
+                    <div class="text-sm opacity-90">Aplikasi Inovatif</div>
+                </div>
+                <div class="text-center p-6 bg-gradient-to-br from-primary-green to-secondary-green rounded-2xl text-white">
+                    <div class="text-3xl font-bold mb-2">7+</div>
+                    <div class="text-sm opacity-90">Mata Pelajaran</div>
+                </div>
+                <div class="text-center p-6 bg-gradient-to-br from-primary-yellow to-yellow-500 rounded-2xl text-white">
+                    <div class="text-3xl font-bold mb-2">2025</div>
+                    <div class="text-sm opacity-90">Tahun Pengembangan</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="tim" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Meet Our Amazing Team</h2>
+                <p class="text-xl text-gray-600">
+                    Tiga mahasiswa Teknologi Pendidikan yang bersemangat mengubah wajah pendidikan Indonesia
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Team Member 1 -->
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-500 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-gradient-to-br from-primary-green to-secondary-green h-48 flex items-center justify-center">
+                        <div class="w-32 h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                            <i class="fas fa-user-graduate text-white text-4xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Indah Tunjung Sari</h3>
+                        <p class="text-primary-green font-semibold mb-4">Project Leader & UI/UX Designer</p>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Passionate tentang desain yang user-friendly dan pengalaman pengguna yang optimal. 
+                            Bertanggung jawab dalam merancang antarmuka aplikasi yang menarik dan intuitif.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-light-green text-primary-green px-3 py-1 rounded-full text-sm">Leadership</span>
+                            <span class="bg-light-green text-primary-green px-3 py-1 rounded-full text-sm">UI/UX Design</span>
+                            <span class="bg-light-green text-primary-green px-3 py-1 rounded-full text-sm">Project Management</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <div class="w-10 h-10 bg-primary-green rounded-full flex items-center justify-center hover:bg-secondary-green transition duration-300 cursor-pointer">
+                                <i class="fab fa-linkedin text-white"></i>
+                            </div>
+                            <div class="w-10 h-10 bg-primary-green rounded-full flex items-center justify-center hover:bg-secondary-green transition duration-300 cursor-pointer">
+                                <i class="fab fa-instagram text-white"></i>
+                            </div>
+                            <div class="w-10 h-10 bg-primary-green rounded-full flex items-center justify-center hover:bg-secondary-green transition duration-300 cursor-pointer">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-500 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-gradient-to-br from-primary-yellow to-yellow-500 h-48 flex items-center justify-center">
+                        <div class="w-32 h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                            <i class="fas fa-code text-white text-4xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Laila Norvika</h3>
+                        <p class="text-primary-yellow font-semibold mb-4">Developer & Content Strategist</p>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Ahli dalam pengembangan aplikasi mobile dan strategi konten pendidikan. 
+                            Fokus pada implementasi fitur-fitur interaktif yang mendukung proses pembelajaran.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-light-yellow text-primary-yellow px-3 py-1 rounded-full text-sm">Mobile Development</span>
+                            <span class="bg-light-yellow text-primary-yellow px-3 py-1 rounded-full text-sm">Content Strategy</span>
+                            <span class="bg-light-yellow text-primary-yellow px-3 py-1 rounded-full text-sm">Programming</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <div class="w-10 h-10 bg-primary-yellow rounded-full flex items-center justify-center hover:bg-yellow-500 transition duration-300 cursor-pointer">
+                                <i class="fab fa-github text-white"></i>
+                            </div>
+                            <div class="w-10 h-10 bg-primary-yellow rounded-full flex items-center justify-center hover:bg-yellow-500 transition duration-300 cursor-pointer">
+                                <i class="fab fa-linkedin text-white"></i>
+                            </div>
+                            <div class="w-10 h-10 bg-primary-yellow rounded-full flex items-center justify-center hover:bg-yellow-500 transition duration-300 cursor-pointer">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-500 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-gradient-to-br from-primary-green to-secondary-green h-48 flex items-center justify-center">
+                        <div class="w-32 h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                            <i class="fas fa-chart-line text-white text-4xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Annisa Laynal Hijjah</h3>
+                        <p class="text-primary-green font-semibold mb-4">Research Analyst & Quality Assurance</p>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Spesialis dalam riset pendidikan dan analisis kebutuhan pengguna. 
+                            Memastikan kualitas aplikasi sesuai dengan standar pendidikan dan kebutuhan siswa.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-light-green text-primary-green px-3 py-1 rounded-full text-sm">Research</span>
+                            <span class="bg-light-green text-primary-green px-3 py-1 rounded-full text-sm">Quality Assurance</span>
+                            <span class="bg-light-green text-primary-green px-3 py-1 rounded-full text-sm">Data Analysis</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <div class="w-10 h-10 bg-primary-green rounded-full flex items-center justify-center hover:bg-secondary-green transition duration-300 cursor-pointer">
+                                <i class="fab fa-linkedin text-white"></i>
+                            </div>
+                            <div class="w-10 h-10 bg-primary-green rounded-full flex items-center justify-center hover:bg-secondary-green transition duration-300 cursor-pointer">
+                                <i class="fab fa-twitter text-white"></i>
+                            </div>
+                            <div class="w-10 h-10 bg-primary-green rounded-full flex items-center justify-center hover:bg-secondary-green transition duration-300 cursor-pointer">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Perjalanan Pengembangan</h2>
+                <p class="text-xl text-gray-600">
+                    Dari ide hingga menjadi aplikasi pembelajaran yang revolusioner
+                </p>
+            </div>
+            
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-primary-green opacity-30"></div>
+                
+                <div class="space-y-12">
+                    <!-- Timeline Item 1 -->
+                    <div class="flex items-center" data-aos="fade-right">
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="bg-light-green rounded-2xl p-6">
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Identifikasi Masalah</h3>
+                                <p class="text-gray-600">Menganalisis kebutuhan pembelajaran digital dan tantangan pendidikan konvensional</p>
+                            </div>
+                        </div>
+                        <div class="w-12 h-12 bg-primary-green rounded-full flex items-center justify-center relative z-10">
+                            <i class="fas fa-search text-white"></i>
+                        </div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+                    
+                    <!-- Timeline Item 2 -->
+                    <div class="flex items-center" data-aos="fade-left">
+                        <div class="w-1/2 pr-8"></div>
+                        <div class="w-12 h-12 bg-primary-yellow rounded-full flex items-center justify-center relative z-10">
+                            <i class="fas fa-lightbulb text-white"></i>
+                        </div>
+                        <div class="w-1/2 pl-8">
+                            <div class="bg-light-yellow rounded-2xl p-6">
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Konsep & Desain</h3>
+                                <p class="text-gray-600">Merancang konsep aplikasi dengan pendekatan konstruktivisme dan model ADDIE</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 3 -->
+                    <div class="flex items-center" data-aos="fade-right">
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="bg-light-green rounded-2xl p-6">
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Pengembangan</h3>
+                                <p class="text-gray-600">Implementasi fitur-fitur interaktif dan pengembangan konten multimedia</p>
+                            </div>
+                        </div>
+                        <div class="w-12 h-12 bg-primary-green rounded-full flex items-center justify-center relative z-10">
+                            <i class="fas fa-code text-white"></i>
+                        </div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+                    
+                    <!-- Timeline Item 4 -->
+                    <div class="flex items-center" data-aos="fade-left">
+                        <div class="w-1/2 pr-8"></div>
+                        <div class="w-12 h-12 bg-primary-yellow rounded-full flex items-center justify-center relative z-10">
+                            <i class="fas fa-rocket text-white"></i>
+                        </div>
+                        <div class="w-1/2 pl-8">
+                            <div class="bg-light-yellow rounded-2xl p-6">
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Evaluasi & Peluncuran</h3>
+                                <p class="text-gray-600">Testing aplikasi dan persiapan peluncuran untuk mendukung pendidikan digital</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-20 bg-gradient-to-br from-primary-green to-secondary-green text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Nilai-Nilai Tim Kami</h2>
+                <p class="text-xl opacity-90">
+                    Prinsip-prinsip yang mendasari setiap langkah pengembangan EduSmart
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
+                        <i class="fas fa-heart text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Inovasi</h3>
+                    <p class="opacity-90 leading-relaxed">
+                        Selalu mencari cara baru dan kreatif untuk meningkatkan pengalaman pembelajaran digital
+                    </p>
+                </div>
+                
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
+                        <i class="fas fa-users text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Kolaborasi</h3>
+                    <p class="opacity-90 leading-relaxed">
+                        Bekerja sama dengan sinergi tinggi untuk mencapai tujuan bersama dalam pendidikan
+                    </p>
+                </div>
+                
+                <div class="text-center" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
+                        <i class="fas fa-star text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Kualitas</h3>
+                    <p class="opacity-90 leading-relaxed">
+                        Berkomitmen memberikan solusi terbaik dengan standar kualitas tinggi untuk pendidikan
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontak" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+            <h2 class="text-4xl font-bold text-gray-800 mb-6">Mari Berkolaborasi!</h2>
+            <p class="text-xl text-gray-600 mb-8">
+                Tertarik dengan proyek EduSmart atau ingin berkolaborasi? Kami sangat senang mendengar dari Anda!
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <div class="w-12 h-12 bg-primary-green rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-envelope text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Email</h3>
+                    <p class="text-gray-600">tim.edusmart@gmail.com</p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <div class="w-12 h-12 bg-primary-yellow rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fab fa-whatsapp text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">WhatsApp</h3>
+                    <p class="text-gray-600">+62 812-3456-7890</p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <div class="w-12 h-12 bg-primary-green rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fab fa-instagram text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Instagram</h3>
+                    <p class="text-gray-600">@edusmart.official</p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-primary-green text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-secondary-green transition duration-300">
+                    Hubungi Kami
+                </button>
+                <button class="border-2 border-primary-green text-primary-green px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary-green hover:text-white transition duration-300">
+                    Download EduSmart
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 py-8 text-center text-white">
+        <p>&copy; 2023 EduSmart. All rights reserved.</p>
+    </footer>
+</body>

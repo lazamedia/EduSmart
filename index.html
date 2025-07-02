@@ -21,6 +21,25 @@
 
   <link rel="stylesheet" href="assets/css/style.css" />
 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-green': '#10B981',
+                        'secondary-green': '#059669',
+                        'light-green': '#D1FAE5',
+                        'primary-yellow': '#F59E0B',
+                        'light-yellow': '#FEF3C7'
+                    }
+                }
+            }
+        }
+    </script>
+
 </head>
 <body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
 
@@ -31,13 +50,15 @@
   </div>
 
   <!-- Navbar akan di‑inject di sini -->
-  <header id="navbar"></header>
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-10"></header>
 
   <!-- Area konten -->
   <main id="app" class="pt-24 pb-16 px-4 lg:px-10 min-h-[calc(100vh-96px)]"></main>
 
   <!-- Router SPA -->
   <script src="router.js" defer></script>
+
+
   
 </body>
 </html>
