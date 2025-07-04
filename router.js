@@ -2,6 +2,7 @@
  * EduSmart simple SPA router
  * --------------------------
  * - injects navbar.html once
+ * - injects footer.html once
  * - intercepts <a data-link> clicks
  * - fetches page HTML into #app
  * - shows #loader while fetching
@@ -12,6 +13,7 @@ const Router = {
 
   async init() {
     await this.injectNavbar();
+    await this.injectFooter();
     this.attachLinkInterceptor();
     this.navigate(this.getPath());            // load initial route
     window.addEventListener('popstate', () => // handle back/forward
@@ -34,6 +36,12 @@ const Router = {
     const navbar = document.getElementById('navbar');
     const html   = await fetch('/components/navbar.html').then(r => r.text());
     navbar.innerHTML = html;
+  },
+
+  async injectFooter() {
+    const footer = document.getElementById('footer');
+    const html   = await fetch('/components/footer.html').then(r => r.text());
+    footer.innerHTML = html;
   },
 
   attachLinkInterceptor() {
